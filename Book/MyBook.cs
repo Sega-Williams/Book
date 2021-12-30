@@ -9,19 +9,19 @@ namespace Book
     class MyBook
     {
         // Parameters
-        private string _nameOfBook = "None";
-        private string _author = "None";
-        private string _publisher = "None";
-        private DateTime _dateOfRelease = new DateTime();
-        private int _proportionsLength = 0;
-        private int _proportionsWidth = 0;
-        private int _numberOfPages = 0;
-        private string _materialOfCover = "None";
-        private string[] _content = { "None" }; // Содержание
-        private string _summary = "None"; // Краткое содержание
-        private string[] _tableOfContents = {"None"}; // Оглавление
+        public string _nameOfBook { get; set; } = "None";
+        public string _author { get; set; } = "None";
+        public string _publisher { get; set; } = "None";
+        public DateTime _dateOfRelease { get; set; } = new DateTime();
+        public int _proportionsLength { get; set; } = 0;
+        public int _proportionsWidth { get; set; } = 0;
+        public int _numberOfPages { get; set; } = 0;
+        public string _materialOfCover { get; set; } = "None";
+        public string[] _content { get; set; } = { "None" }; // Содержание
+        public string _summary { get; set; } = "None"; // Краткое содержание
+        public string[] _tableOfContents { get; set; } = {"None"}; // Оглавление
 
-        public bool opened = false;
+        public bool opened { get; set; } = false;
 
         public int ReadingPage { get; set; } = 1;
 
@@ -31,7 +31,7 @@ namespace Book
         private int oldWinW = Console.WindowWidth;
         private int oldBufW = Console.BufferWidth;
 
-        int maxCharsOnPage = 0;
+        public int maxCharsOnPage { get; set; } = 0;
 
         //Constructor
         public MyBook(string nameOfBook, string author, string publisher, int length, int width, string material, string[] content, string summary, string[] tableOf)

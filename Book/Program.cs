@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Json;
 
 namespace Book
 {
@@ -11,6 +12,11 @@ namespace Book
             
             MyBook trying = new MyBook("\"Trying\"", "Sergey Koksharov", "\"Myself\"", 40, 25, "Paper", content, "\"Book of my life and trying to stand up Programmer\"(c)", tableOf);
             
+            //JSON
+            string json = JsonSerializer.Serialize<MyBook>(trying);
+            Console.WriteLine(json);
+
+            Console.ReadLine();
             trying.Processing();            
         }
     }
